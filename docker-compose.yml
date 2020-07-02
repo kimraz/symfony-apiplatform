@@ -1,0 +1,27 @@
+version: '2'
+
+services:
+
+    php:
+        build:
+            context: php7-fpm
+            args:
+                TIMEZONE: ${TIMEZONE}
+        volumes:
+            - ./app:/var/www/symfony
+        networks:
+            - symfony-apiplatform
+
+    nginx:
+        build: nginx
+        ports:
+            - 80:80
+        volumes_from:
+            - php
+        networks:
+            - symfony-apiplatform
+
+networks:
+
+    symfony-apiplatform:
+        driver: bridge
