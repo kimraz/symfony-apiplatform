@@ -4,7 +4,7 @@
 2. `composer install`
 3. `cd ..`
 4. `docker-compose build`
-5. `docker-compose up -d``
+5. `docker-compose up -d`
 ## Navigation
 ### Swagger-UI
 `http://localhost/api`
