@@ -24,7 +24,17 @@ class Article
     /**
      * @var string
      */
+    public $url = "";
+
+    /**
+     * @var string
+     */
     public $headline;
+
+    /**
+     * @var string
+     */
+    public $seoHeadline;
 
     /**
      * @var string
@@ -56,6 +66,22 @@ class Article
     }
 
     /**
+     * @return string
+     */
+    public function getUrl(): string
+    {
+        return $this->url;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSeoHeadline(): string
+    {
+        return $this->seoHeadline;
+    }
+
+    /**
      * @param int $id
      */
     public function setId(int $id): void
@@ -77,5 +103,21 @@ class Article
     public function setKicker(string $kicker): void
     {
         $this->kicker = $kicker;
+    }
+
+    /**
+     * @param string $url
+     */
+    public function setUrl(string $url): void
+    {
+        $this->url = $url;
+    }
+
+    /**
+     * @param string $seoHeadline
+     */
+    public function setSeoHeadline(string $seoHeadline): void
+    {
+        $this->seoHeadline = $seoHeadline;
     }
 }
