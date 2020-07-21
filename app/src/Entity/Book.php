@@ -9,8 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity(repositoryClass=BookRepository::class)
  * @ApiResource(
- *     collectionOperations={"get"},
- *     itemOperations={"get"}
+ *
  * )
  */
 class Book
